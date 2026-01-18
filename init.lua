@@ -748,6 +748,16 @@ require('lazy').setup(
         vim.cmd.colorscheme 'nordic'
       end,
     },
+    {
+      'epwalsh/obsidian.nvim',
+      version = '*',
+      lazy = true,
+      ft = 'markdown',
+      dependencies = { 'nvim-lua/plenary.nvim', 'hrsh7th/nvim-cmp', 'nvim-telescope/telescope.nvim', 'nvim-treesitter/nvim-treesitter' },
+      config = function()
+        require('obsidian').setup()
+      end,
+    },
 
     -- Highlight todo, notes, etc in comments
     { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
