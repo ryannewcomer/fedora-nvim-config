@@ -748,6 +748,7 @@ require('lazy').setup(
         vim.cmd.colorscheme 'nordic'
       end,
     },
+    { 'windwp/nvim-autopairs', event = 'InsertEnter', config = true },
     {
       'epwalsh/obsidian.nvim',
       version = '*',
